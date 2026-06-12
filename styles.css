@@ -1,0 +1,256 @@
+:root {
+  --bg-start: #101a48;
+  --bg-end: #081124;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.14);
+  --text: #eef2ff;
+  --muted: #aab7d7;
+  --accent: #6f63ff;
+  --accent-soft: rgba(111, 99, 255, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(circle at top left, rgba(111, 99, 255, 0.27), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(43, 202, 233, 0.17), transparent 20%),
+    linear-gradient(180deg, #0e1639 0%, #090c1a 100%);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.page-shell {
+  padding: 2rem 0 4rem;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.brand p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(111, 99, 255, 0.95), rgba(45, 154, 255, 0.85));
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-section {
+  min-height: 360px;
+}
+
+.hero-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #d2d9ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-copy h2 {
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  line-height: 1.02;
+  margin-bottom: 1rem;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  max-width: 620px;
+  font-size: 1.05rem;
+}
+
+.hero-badges .badge {
+  font-weight: 600;
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-card-overlay {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(10, 19, 39, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+}
+
+.mini-card {
+  min-height: 96px;
+}
+
+.dashboard-cards .stat-card {
+  background: linear-gradient(180deg, rgba(111, 99, 255, 0.16), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+}
+
+.dashboard-panel,
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  backdrop-filter: blur(16px);
+}
+
+.dashboard-panel .table {
+  color: #eef2ff;
+}
+
+.table thead {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.table th,
+.table td {
+  border-top: none;
+  padding: 1rem 0.75rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-label,
+.form-control,
+.form-control:focus,
+.btn {
+  font-weight: 500;
+}
+
+#student-form label,
+#student-form .form-label {
+  color: #ffffff !important;
+}
+
+#student-form .form-control,
+#student-form input.form-control,
+#student-form select.form-control,
+#student-form textarea.form-control {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff !important;
+}
+
+#student-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#student-form .form-control:focus {
+  color: #ffffff !important;
+  border-color: rgba(111, 99, 255, 0.95);
+  box-shadow: 0 0 0 0.25rem rgba(111, 99, 255, 0.22);
+}
+
+#student-form .form-control:focus {
+  color: #f8fbff;
+  border-color: rgba(111, 99, 255, 0.95);
+  box-shadow: 0 0 0 0.25rem rgba(111, 99, 255, 0.22);
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.btn-primary,
+.btn-gradient {
+  background: linear-gradient(135deg, #6f63ff, #2d9aff);
+  border: none;
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(111, 99, 255, 0.22);
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-gradient {
+  transition: transform 0.25s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+}
+
+.badge.bg-light {
+  color: #101a48;
+}
+
+@media (max-width: 991px) {
+  .topbar,
+  .hero-card,
+  .dashboard-panel,
+  .glass-panel {
+    border-radius: 28px;
+  }
+
+  .hero-card-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    padding: 1rem 0 3rem;
+  }
+
+  .hero-copy h2 {
+    font-size: 2.2rem;
+  }
+}
